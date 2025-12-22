@@ -32,6 +32,56 @@
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/layui/layui.css">
     <link rel="stylesheet" href="static/swiper/swiper-bundle.min.css">
+    <style>
+        /* Force Hot Games grid layout on category page */
+        .gametop .gamelist{
+            display:flex !important;
+            flex-wrap:wrap !important;
+        }
+        .gametop .gamelist>li{
+            width:calc((100% - 80px)/6) !important;
+            margin:16px 16px 0 0 !important;
+            transition:all .3s !important;
+        }
+        .gametop .gamelist>li:nth-child(6n){
+            margin-right:0 !important;
+        }
+        .gametop .gamelist>li>a{
+            display:flex !important;
+            flex-direction:column !important;
+            align-items:center !important;
+            width:100% !important;
+            background:#1b1b1b !important;
+            border-radius:16px !important;
+            border:2px solid transparent !important;
+            padding:24px 16px !important;
+        }
+        .gametop .gamelist>li>a .thumb{
+            width:120px !important;
+            height:120px !important;
+            position:relative !important;
+        }
+        .gametop .gamelist>li>a .thumb>img{
+            border-radius:16px !important;
+            width:100% !important;
+            height:100% !important;
+            object-fit:cover !important;
+            object-position:center !important;
+        }
+        .gametop .gamelist>li>a dl{
+            margin-top:16px !important;
+        }
+        .gametop .gamelist>li>a dl dt{
+            color:#fff !important;
+            font-size:16px !important;
+            text-align:center !important;
+        }
+        .gametop .gamelist>li>a dl dd{
+            text-align:center !important;
+            font-size:12px !important;
+            color:#999 !important;
+        }
+    </style>
     <script src="static/layui/layui.all.js"></script>
     <script src="static/swiper/swiper-bundle.min.js"></script>
     <script src="static/js/jquery.min.js"></script>
@@ -315,7 +365,7 @@
         </div>
         <div class="gametop">
             <h2>Hot Games</h2>
-            <ul class="gamelist">
+            <ul class="gamelist" >
                                                                                     <li>
                             <a href="detail/hypercasual/minecraft.html">
                                 <div class="thumb">
@@ -331,7 +381,7 @@
                                 </dl>
                             </a>
                         </li>
-                                                                    <li>
+                                                                                                                    <li>
                             <a href="detail/puzzle/the_room.html">
                                 <div class="thumb">
                                     <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/16018c59bb8b679100ce768c21d4086d.jpg" alt="The Room">
@@ -346,7 +396,7 @@
                                 </dl>
                             </a>
                         </li>
-                                                                    <li>
+                                                                                                                    <li>
                             <a href="detail/adventure/roblox.html">
                                 <div class="thumb">
                                     <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/19cd30725e100f8c5f2cbfb73941cd0e.png" alt="Roblox">
@@ -361,7 +411,7 @@
                                 </dl>
                             </a>
                         </li>
-                                                                    <li>
+                                                                                                                    <li>
                             <a href="detail/puzzle/the_room_two.html">
                                 <div class="thumb">
                                     <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/8733bbcfc79351d947eb63ba92043f44.jpg" alt="The Room Two">
@@ -376,7 +426,7 @@
                                 </dl>
                             </a>
                         </li>
-                                                                    <li>
+                                                                                                                    <li>
                             <a href="detail/adventure/don%27t_starve__pocket_edition.html">
                                 <div class="thumb">
                                     <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/bd6584996b08be488f63ee274991f6d6.jpg" alt="Don&#039;t Starve: Pocket Edition">
@@ -391,7 +441,7 @@
                                 </dl>
                             </a>
                         </li>
-                                                                    <li>
+                                                                                                                    <li>
                             <a href="detail/adventure/age_of_origins.html">
                                 <div class="thumb">
                                     <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/cf50e1859bce28427e099f55bb46869d.jpg" alt="Age of Origins">
@@ -406,187 +456,7 @@
                                 </dl>
                             </a>
                         </li>
-                                                                    <li>
-                            <a href="detail/action/free_fire__6th_anniversary.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/81992d5bb565b64fcbbbc3b7b53f75f2.jpg" alt="Free Fire: 6th Anniversary">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Free Fire: 6th Anniversary
-                                    </dt>
-                                    <dd>
-                                        4.1 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/puzzle/merge_dragons%21.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/23db152642277f6d57d5b7d6214c1891.jpg" alt="Merge Dragons!">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Merge Dragons!
-                                    </dt>
-                                    <dd>
-                                        4.5 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/adventure/poppy_playtime_chapter_1.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/f4f7dbc1e749ca43cb27d3d6177e7873.jpg" alt="Poppy Playtime Chapter 1">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Poppy Playtime Chapter 1
-                                    </dt>
-                                    <dd>
-                                        4.1 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/adventure/the_past_within.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/87b6cb49acf78761d1f4095029e59fa0.png" alt="The Past Within">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        The Past Within
-                                    </dt>
-                                    <dd>
-                                        4.9 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/rpg/grand_theft_auto__vice_city.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/d1f7be750bce7909fcde2c85117c25ab.png" alt="Grand Theft Auto: Vice City">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Grand Theft Auto: Vice City
-                                    </dt>
-                                    <dd>
-                                        4.1 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/rpg/goddess_of_victory__nikke.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/27e929fb479e1c0c5e1b0fd53068d6fc.png" alt="GODDESS OF VICTORY: NIKKE">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        GODDESS OF VICTORY: NIKKE
-                                    </dt>
-                                    <dd>
-                                        4.5 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/action/mobile_legends__bang_bang.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/bf6e7724f739b8d03c6e9acb41a8fbe4.jpg" alt="Mobile Legends: Bang Bang">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Mobile Legends: Bang Bang
-                                    </dt>
-                                    <dd>
-                                        4.2 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/driving/hill_climb_racing_2.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/e1fc5555ad50719c2d6f68fa4ef8f88e.jpg" alt="Hill Climb Racing 2">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Hill Climb Racing 2
-                                    </dt>
-                                    <dd>
-                                        4.5 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/driving/need_for_speed_no_limits.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/34e72e88195df1d4144d3645c531c65a.jpg" alt="Need for Speed No Limits">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Need for Speed No Limits
-                                    </dt>
-                                    <dd>
-                                        4.6 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/action/the_sun__origin.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/0e3bc20e15a12c23cb09c75d1f15579f.jpg" alt="The Sun: Origin">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        The Sun: Origin
-                                    </dt>
-                                    <dd>
-                                        3.9 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/rpg/papers%2c_please.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/3d3ccd6248c577d19acf07d45e27b512.png" alt="Papers, Please">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Papers, Please
-                                    </dt>
-                                    <dd>
-                                        4.6 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                                    <li>
-                            <a href="detail/rpg/tinyfolks.html">
-                                <div class="thumb">
-                                    <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/90feef09147bd70921ff7dc099416942.png" alt="Tinyfolks">
-                                </div>
-                                <dl>
-                                    <dt>
-                                        Tinyfolks
-                                    </dt>
-                                    <dd>
-                                        4.8 <i class="iconfont icon-xing"></i>
-                                    </dd>
-                                </dl>
-                            </a>
-                        </li>
-                                                </ul>
+                                                                                                        </ul>
         </div>
     </div>
 </div>
