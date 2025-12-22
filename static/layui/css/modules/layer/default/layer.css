@@ -1,0 +1,266 @@
+html #layuicss-layercss {
+    display: none;
+    position: absolute;
+    width: 1989px
+}
+
+.layui-layer {
+    position: fixed;
+    _position: absolute;
+    outline: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.layui-layer-shade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    z-index: 19891014;
+}
+
+.layui-layer-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+.layui-layer-title {
+    padding: 0 80px 0 20px;
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    border-radius: 2px 2px 0 0;
+}
+
+.layui-layer-setwin {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 0;
+    line-height: initial;
+}
+
+.layui-layer-setwin a {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.layui-layer-setwin .layui-layer-min cite {
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #2E2D3C;
+    cursor: pointer;
+    display: block;
+}
+
+.layui-layer-setwin .layui-layer-max {
+    background-position: -32px -40px;
+}
+
+.layui-layer-setwin .layui-layer-maxmin {
+    background-position: -16px -40px;
+}
+
+.layui-layer-setwin .layui-layer-close1 {
+    cursor: pointer;
+    background-position: 1px -40px;
+}
+
+.layui-layer-setwin .layui-layer-close2 {
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    background-position: -149px -31px;
+}
+
+.layui-layer-btn {
+    padding: 10px 15px;
+    text-align: right;
+    border-top: 1px solid #D9D9D9;
+    background-color: #F8F8F8;
+    border-radius: 0 0 2px 2px;
+}
+
+.layui-layer-btn a {
+    height: 28px;
+    line-height: 28px;
+    margin: 5px 5px 0;
+    padding: 0 15px;
+    border: 1px solid #DEDEDE;
+    background-color: #fff;
+    color: #333;
+    border-radius: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.layui-layer-btn a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+    background-color: #009688;
+    border-color: #009688;
+    color: #fff;
+}
+
+.layui-layer-dialog {
+    min-width: 260px;
+}
+
+.layui-layer-dialog .layui-layer-content {
+    padding: 20px;
+    line-height: 24px;
+    word-break: break-all;
+    font-size: 14px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.layui-layer-dialog .layui-layer-content .layui-layer-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+}
+
+.layui-layer-msg {
+    min-width: 180px;
+    border: 1px solid #D9D9D9;
+    box-shadow: none;
+}
+
+.layui-layer-msg .layui-layer-content {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.layui-layer-msg .layui-layer-content .layui-layer-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 10px;
+}
+
+.layui-layer-msg .layui-layer-content .layui-layer-padding {
+    padding-left: 30px;
+}
+
+.layui-layer-loading {
+    border-radius: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.layui-layer-loading .layui-layer-content {
+    width: 60px;
+    height: 60px;
+    background: url(data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEIGIGwQxxSqHnmikrqBYgqCA1hCAcjCGSkYgMyGCUSXKwC2UwAAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wjhiKgjKJ6w0xZ27KfRkqP8nqiKl+oTj4Zxrq7+3P9G+Jzfs+27PwF+Tj+gJ8nSdQp+FqnV2u70QqPCKdTjUEgAOw==) no-repeat center;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.layui-layer-tips {
+    background: none;
+    box-shadow: none;
+}
+
+.layui-layer-tips .layui-layer-content {
+    position: relative;
+    padding: 10px;
+    line-height: 22px;
+    border: 1px solid #FF5722;
+    border-radius: 2px;
+    box-shadow: none;
+    background-color: #FF5722;
+    color: #fff;
+}
+
+.layui-layer-tips i.layui-layer-TipsG {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: dashed;
+    border-color: transparent;
+    overflow: hidden;
+}
+
+.layui-layer-tips i.layui-layer-TipsB {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.layui-layer-tips[class*="layui-layer-TipsT"] i.layui-layer-TipsG,
+.layui-layer-tips[class*="layui-layer-TipsT"] i.layui-layer-TipsB {
+    bottom: -8px;
+    left: 20px;
+    border-top-color: #FF5722;
+    border-top-style: solid;
+}
+
+.layui-layer-tips[class*="layui-layer-TipsB"] i.layui-layer-TipsG,
+.layui-layer-tips[class*="layui-layer-TipsB"] i.layui-layer-TipsB {
+    top: -8px;
+    left: 20px;
+    border-bottom-color: #FF5722;
+    border-bottom-style: solid;
+}
+
+.layui-layer-tips[class*="layui-layer-TipsL"] i.layui-layer-TipsG,
+.layui-layer-tips[class*="layui-layer-TipsL"] i.layui-layer-TipsB {
+    right: -8px;
+    top: 20px;
+    border-left-color: #FF5722;
+    border-left-style: solid;
+}
+
+.layui-layer-tips[class*="layui-layer-TipsR"] i.layui-layer-TipsG,
+.layui-layer-tips[class*="layui-layer-TipsR"] i.layui-layer-TipsB {
+    left: -8px;
+    top: 20px;
+    border-right-color: #FF5722;
+    border-right-style: solid;
+}
+

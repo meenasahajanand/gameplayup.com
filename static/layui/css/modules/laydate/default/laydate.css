@@ -1,0 +1,122 @@
+html #layuicss-laydatecss {
+    display: none;
+    position: absolute;
+    width: 1989px
+}
+
+.layui-laydate {
+    position: absolute;
+    z-index: 99999999;
+    font-size: 14px;
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    color: #666;
+    margin: 5px 0;
+}
+
+.layui-laydate-main {
+    width: 280px;
+    padding: 10px;
+}
+
+.layui-laydate-header {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 14px;
+    text-align: center;
+}
+
+.layui-laydate-header i {
+    position: absolute;
+    top: 10px;
+    padding: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+}
+
+.layui-laydate-header i:hover {
+    color: #009688;
+}
+
+.layui-laydate-header i.laydate-prev-y {
+    left: 5px;
+}
+
+.layui-laydate-header i.laydate-prev-m {
+    left: 29px;
+}
+
+.layui-laydate-header i.laydate-next-m {
+    right: 29px;
+}
+
+.layui-laydate-header i.laydate-next-y {
+    right: 5px;
+}
+
+.layui-laydate-content {
+    position: relative;
+}
+
+.layui-laydate-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.layui-laydate-content th,
+.layui-laydate-content td {
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.layui-laydate-content th {
+    font-weight: 500;
+    color: #333;
+}
+
+.layui-laydate-content td {
+    color: #666;
+}
+
+.layui-laydate-content td.laydate-day-prev,
+.layui-laydate-content td.laydate-day-next {
+    color: #d2d2d2;
+}
+
+.layui-laydate-content td:hover {
+    background-color: #f2f2f2;
+}
+
+.layui-laydate-content td.laydate-selected {
+    background-color: #009688;
+    color: #fff;
+}
+
+.layui-laydate-content td.laydate-selected:hover {
+    background-color: #009688;
+}
+
+.layui-laydate-footer {
+    position: relative;
+    padding: 10px;
+    border-top: 1px solid #e2e2e2;
+    text-align: right;
+}
+
+.layui-laydate-footer span {
+    cursor: pointer;
+    padding: 0 10px;
+    color: #009688;
+}
+
+.layui-laydate-footer span:hover {
+    opacity: 0.8;
+}
+

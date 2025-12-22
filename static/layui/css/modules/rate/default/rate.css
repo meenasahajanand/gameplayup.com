@@ -1,0 +1,67 @@
+html #layuicss-ratecss {
+    display: none;
+    position: absolute;
+    width: 1989px
+}
+
+.layui-rate, .layui-rate * {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.layui-rate {
+    padding: 10px 5px 10px 0;
+    font-size: 0
+}
+
+.layui-rate li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.layui-rate li i.layui-icon {
+    font-size: 20px;
+    color: #FFB800;
+    margin-right: 5px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    cursor: pointer
+}
+
+.layui-rate li i.layui-icon-rate {
+    color: #FFB800
+}
+
+.layui-rate li i.layui-icon-rate-solid {
+    color: #FFB800
+}
+
+.layui-rate li i:hover {
+    cursor: pointer;
+    transform: scale(1.12);
+    -webkit-transform: scale(1.12)
+}
+
+.layui-rate[readonly] li i:hover {
+    cursor: default;
+    transform: scale(1)
+}
+
+.layui-rate li i.layui-icon-rate-half {
+    position: relative
+}
+
+.layui-rate li i.layui-icon-rate-half:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    color: #FFB800
+}
+
