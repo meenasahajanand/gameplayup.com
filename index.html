@@ -37,15 +37,55 @@
     <script src="static/js/fastclick.js"></script>
     <script src="static/js/lazyload.min.js"></script>
 
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 <script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23330730517/zoplayy.com_inter', [[320, 480], [468, 60], [480, 320]], 'div-gpt-ad-1766482157131-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
+  window.googletag = window.googletag || { cmd: [] };
+  let interstitialSlot;
+
+  googletag.cmd.push(() => {
+    // ✅ Define interstitial slot
+    interstitialSlot = googletag.defineOutOfPageSlot(
+      '/23330730517/zoplayy.com_inter',
+      googletag.enums.OutOfPageFormat.INTERSTITIAL
+    );
+
+    if (interstitialSlot) {
+      interstitialSlot.addService(googletag.pubads());
+    }
+
     googletag.enableServices();
+
+    // ✅ Preload the interstitial ad immediately after page load
+    if (interstitialSlot) {
+      googletag.display(interstitialSlot);
+    }
   });
+
+  // ✅ Function to show interstitial and then call callback
+  function showInterstitialAd(callback) {
+    googletag.cmd.push(() => {
+      if (interstitialSlot) {
+        googletag.pubads().display(interstitialSlot);
+      }
+      // ⏳ Fast fallback: max wait 500ms
+      setTimeout(() => {
+        if (typeof callback === 'function') callback();
+      }, 500);
+    });
+  }
 </script>
+
+
+    <style>
+      #link {
+        display: none;
+      }
+
+      div.content {
+        position: fixed;
+        top: 50%;
+      }
+    </style>
     
                 
 <script>
@@ -178,7 +218,7 @@ googletag.cmd.push(function() {
                         </div>
                         <ul class="gamelist">
                                                                                                                                     <li>
-                                        <a href="detail/action/five_nights_at_freddy%27s.html">
+                                        <a href="detail/five_nights_at_freddy%27s.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/cc172e1c8019189d7dcc5d866de8f6b6.jpg" alt="Five Nights at Freddy&#039;s">
                                             </div>
@@ -190,7 +230,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/dragon_ball_z_dokkan_battle.html">
+                                        <a href="detail/dragon_ball_z_dokkan_battle.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/cb15108052dd34a7fded9c20db47a4eb.jpg" alt="DRAGON BALL Z DOKKAN BATTLE">
                                             </div>
@@ -202,7 +242,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/call_of_duty_mobile_season_7.html">
+                                        <a href="detail/call_of_duty_mobile_season_7.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/bb32a2300125a185d08923b4cf32bcde.jpg" alt="Call of Duty Mobile Season 7">
                                             </div>
@@ -214,7 +254,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/grand_theft_auto__san_andreas.html">
+                                        <a href="detail/grand_theft_auto__san_andreas.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/5f1dacf7be6627c97719bb8b83109f22.jpg" alt="Grand Theft Auto: San Andreas">
                                             </div>
@@ -226,7 +266,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/free_fire__6th_anniversary.html">
+                                        <a href="detail/free_fire__6th_anniversary.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/81992d5bb565b64fcbbbc3b7b53f75f2.jpg" alt="Free Fire: 6th Anniversary">
                                             </div>
@@ -238,7 +278,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/pubg_mobile.html">
+                                        <a href="detail/pubg_mobile.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/c5eff576fea79d9165c3fd0483da5742.jpg" alt="PUBG MOBILE">
                                             </div>
@@ -250,7 +290,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/dragon_ball_legends.html">
+                                        <a href="detail/dragon_ball_legends.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/8c19eb4d39d5cdbc615f19c2ea111435.jpg" alt="DRAGON BALL LEGENDS">
                                             </div>
@@ -262,7 +302,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/brotato_premium.html">
+                                        <a href="detail/brotato_premium.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/59b915a4db454800a49029ea61407607.jpg" alt="Brotato:Premium">
                                             </div>
@@ -274,7 +314,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/war_robots_multiplayer_battles.html">
+                                        <a href="detail/war_robots_multiplayer_battles.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/be180c2422c343b0e471237a59066591.jpg" alt="War Robots Multiplayer Battles">
                                             </div>
@@ -286,7 +326,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/bleach_brave_souls_anime_games.html">
+                                        <a href="detail/bleach_brave_souls_anime_games.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/32df12d18bed98643ae39930eab4463b.jpg" alt="Bleach:Brave Souls Anime Games">
                                             </div>
@@ -298,7 +338,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/hitman_sniper.html">
+                                        <a href="detail/hitman_sniper.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/0f0c0d6fe9e14bb9e0aa0eb835e6227c.jpg" alt="Hitman Sniper">
                                             </div>
@@ -310,7 +350,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/free_fire_max.html">
+                                        <a href="detail/free_fire_max.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/faf5fe38c9c2944c762f3c0f4e07986d.jpg" alt="Free Fire MAX">
                                             </div>
@@ -322,7 +362,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/war_machines%ef%bc%9atanks_battle_game.html">
+                                        <a href="detail/war_machines%ef%bc%9atanks_battle_game.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/cbd2b3899e925128f15fd7e676a3c6c2.jpg" alt="War Machines：Tanks Battle Game">
                                             </div>
@@ -334,7 +374,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/dead_cells.html">
+                                        <a href="detail/dead_cells.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/43cc58927cb39307692f0e524ab56323.jpg" alt="Dead Cells">
                                             </div>
@@ -346,7 +386,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/castlevania__sotn.html">
+                                        <a href="detail/castlevania__sotn.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/4acf93f7b503318a345152637d25249a.jpg" alt="Castlevania: SotN">
                                             </div>
@@ -358,7 +398,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/dc_heroes_%26_villains__match_3.html">
+                                        <a href="detail/dc_heroes_%26_villains__match_3.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/7b3a76f9bbf6bc726467093fd05b58d8.jpg" alt="DC Heroes &amp; Villains: Match 3">
                                             </div>
@@ -370,7 +410,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/poppy_playtime_chapter_2.html">
+                                        <a href="detail/poppy_playtime_chapter_2.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/896450e0ab42ff6a3beb3ba43473d001.jpg" alt="Poppy Playtime Chapter 2">
                                             </div>
@@ -382,7 +422,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/action/mobile_legends__bang_bang.html">
+                                        <a href="detail/mobile_legends__bang_bang.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/bf6e7724f739b8d03c6e9acb41a8fbe4.jpg" alt="Mobile Legends: Bang Bang">
                                             </div>
@@ -415,7 +455,7 @@ googletag.cmd.push(function() {
                         </div>
                         <ul class="gamelist">
                                                                                                                                     <li>
-                                        <a href="detail/arcade/paper.html">
+                                        <a href="detail/paper.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/82ab3d865ffe00876711da00d571616c.jpg" alt="Paper.io 2">
                                             </div>
@@ -427,7 +467,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/subway_surfers.html">
+                                        <a href="detail/subway_surfers.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/03092aa4bb0618a797af2bc1cc719a7d.jpg" alt="Subway Surfers">
                                             </div>
@@ -439,7 +479,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/mob_control.html">
+                                        <a href="detail/mob_control.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/11fe24c9da74c3c588dac9035204a397.jpg" alt="Mob Control">
                                             </div>
@@ -451,7 +491,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/crowd_evolution%21.html">
+                                        <a href="detail/crowd_evolution%21.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/ff118ff2d78f1b96905a50f160cf97a0.jpg" alt="Crowd Evolution!">
                                             </div>
@@ -463,7 +503,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/hole.html">
+                                        <a href="detail/hole.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/27201fce76e68b062de437a8f157b130.jpg" alt="Hole.io">
                                             </div>
@@ -475,7 +515,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/twerk_race_3d_%e2%80%94_running_game.html">
+                                        <a href="detail/twerk_race_3d_%e2%80%94_running_game.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/b181f7ee710cd306b2e83ec1d04493fb.jpg" alt="Twerk Race 3D — Running Game">
                                             </div>
@@ -487,7 +527,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/flow_legends__pipe_games.html">
+                                        <a href="detail/flow_legends__pipe_games.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/81e5aec208a22d06d3ac08e0b407196f.jpg" alt="Flow Legends: Pipe Games">
                                             </div>
@@ -499,7 +539,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/cooking_madness_-a_chef%27s_game.html">
+                                        <a href="detail/cooking_madness_-a_chef%27s_game.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/4fe2cc915f2c19ad0b0bc4964089a41f.jpg" alt="Cooking Madness -A Chef&#039;s Game">
                                             </div>
@@ -511,7 +551,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/vector_classic.html">
+                                        <a href="detail/vector_classic.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/8846f39ad5465f3e750c2310aba53aa2.jpg" alt="Vector Classic">
                                             </div>
@@ -523,7 +563,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/sonic_jump_pro.html">
+                                        <a href="detail/sonic_jump_pro.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/8c6b4d1e5a7d6ffb22be201fa4d06cdb.jpg" alt="Sonic Jump Pro">
                                             </div>
@@ -535,7 +575,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/join_clash_3d.html">
+                                        <a href="detail/join_clash_3d.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/82f182f36f721df45e12c407514af59b.jpg" alt="Join Clash 3D">
                                             </div>
@@ -547,7 +587,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/geometry_dash_subzero.html">
+                                        <a href="detail/geometry_dash_subzero.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/f0a23efd8881d7f7506d25f421fc7b5e.jpg" alt="Geometry Dash SubZero">
                                             </div>
@@ -559,7 +599,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/pocket_champs__3d_racing_games.html">
+                                        <a href="detail/pocket_champs__3d_racing_games.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/d81115ec1af53595551e71386eaac04f.jpg" alt="Pocket Champs: 3D Racing Games">
                                             </div>
@@ -571,7 +611,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/pizza_boy_gba_pro.html">
+                                        <a href="detail/pizza_boy_gba_pro.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/7283a4c9d5bf5a75b2da19a728eda396.jpg" alt="Pizza Boy GBA Pro">
                                             </div>
@@ -583,7 +623,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/alien_invasion__rpg_idle_space.html">
+                                        <a href="detail/alien_invasion__rpg_idle_space.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/e6ca75ab2928b2d64d8db2e8760285cb.jpg" alt="Alien Invasion: RPG Idle Space">
                                             </div>
@@ -595,7 +635,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/wing_fighter.html">
+                                        <a href="detail/wing_fighter.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/137404a7c06f4bc21f157f289c0fc2ad.jpg" alt="Wing Fighter">
                                             </div>
@@ -607,7 +647,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/galaxiga_arcade_shooting_game.html">
+                                        <a href="detail/galaxiga_arcade_shooting_game.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/98e79c61a08c3100a6637ede8227d752.jpg" alt="Galaxiga Arcade Shooting Game">
                                             </div>
@@ -619,7 +659,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/arcade/fruit_ninja_2.html">
+                                        <a href="detail/fruit_ninja_2.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/c4adc8a1565cec7f9f83b45d227dc3be.jpg" alt="Fruit Ninja 2">
                                             </div>
@@ -652,7 +692,7 @@ googletag.cmd.push(function() {
                         </div>
                         <ul class="gamelist">
                                                                                                                                     <li>
-                                        <a href="detail/hypercasual/beatstar.html">
+                                        <a href="detail/beatstar.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/af01bc5200f7a7f962d3fc8d65e4d1d0.jpg" alt="Beatstar">
                                             </div>
@@ -664,7 +704,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/spongebob__sponge_on_the_run.html">
+                                        <a href="detail/spongebob__sponge_on_the_run.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/0d7ef51e99743c4a8fc4b726707a1d99.jpg" alt="SpongeBob: Sponge on the Run">
                                             </div>
@@ -676,7 +716,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/cut_the_rope.html">
+                                        <a href="detail/cut_the_rope.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/3640096647bec9c4fda9eef0776c7fed.jpg" alt="Cut the Rope">
                                             </div>
@@ -688,7 +728,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/angry_birds_friends.html">
+                                        <a href="detail/angry_birds_friends.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/d36397c52487245a7acbecc1e0ed2a86.jpg" alt="Angry Birds Friends">
                                             </div>
@@ -700,7 +740,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/number_master__run_and_merge.html">
+                                        <a href="detail/number_master__run_and_merge.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/773069a46c3c4e57b39c14a93cd9f868.jpg" alt="Number Master: Run and merge">
                                             </div>
@@ -712,7 +752,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/ball_sort_puzzle.html">
+                                        <a href="detail/ball_sort_puzzle.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/af1febab1863dc42d774c7c5e0640716.jpg" alt="Ball Sort Puzzle">
                                             </div>
@@ -724,7 +764,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/helix_jump.html">
+                                        <a href="detail/helix_jump.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/a705ae9921832247f3991c8daf6a5026.jpg" alt="Helix Jump">
                                             </div>
@@ -736,7 +776,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/stack_ball_3d.html">
+                                        <a href="detail/stack_ball_3d.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/b8a5a96c7ab750f3ec7856d4243dfc3c.jpg" alt="Stack Ball 3D">
                                             </div>
@@ -748,7 +788,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/count_masters__crowd_runner_3d.html">
+                                        <a href="detail/count_masters__crowd_runner_3d.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/b848d7ce5fc4b07969721d5ac07116b1.jpg" alt="Count Masters: Crowd Runner 3D">
                                             </div>
@@ -760,7 +800,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/my_talking_angela.html">
+                                        <a href="detail/my_talking_angela.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/eb37caf64ee47c078d8f587a89679279.jpg" alt="My Talking Angela">
                                             </div>
@@ -772,7 +812,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/tiny_wings.html">
+                                        <a href="detail/tiny_wings.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/bfb944982060896dfc5bfeab2c5f6042.jpg" alt="Tiny Wings">
                                             </div>
@@ -784,7 +824,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/fruit_ninja_classic.html">
+                                        <a href="detail/fruit_ninja_classic.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/1d1bc85ff9d03d7d00c065b6747e1ed0.jpg" alt="Fruit Ninja Classic">
                                             </div>
@@ -796,7 +836,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/line_color_3d.html">
+                                        <a href="detail/line_color_3d.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/553035a5f31593f102301bc300226d66.jpg" alt="Line Color 3D">
                                             </div>
@@ -808,7 +848,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/amaze.html">
+                                        <a href="detail/amaze.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/4724f7e43656956b61c4343574557008.jpg" alt="AMAZE">
                                             </div>
@@ -820,7 +860,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/tomb_of_the_mask.html">
+                                        <a href="detail/tomb_of_the_mask.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/dd9f85fd6f5aa5c5410ee8d5faad065d.jpg" alt="Tomb of the Mask">
                                             </div>
@@ -832,7 +872,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/aquapark.html">
+                                        <a href="detail/aquapark.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/0ca86b06b6ad7c32d1791fbccce3d5e3.jpg" alt="aquapark.io">
                                             </div>
@@ -844,7 +884,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/crossy_road.html">
+                                        <a href="detail/crossy_road.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/b191367af62d15cfd8c13b3937c9f673.jpg" alt="Crossy Road">
                                             </div>
@@ -856,7 +896,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/hypercasual/tall_man_run.html">
+                                        <a href="detail/tall_man_run.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/8172f6d3e6eaeffb6fe2f13750a60e00.jpg" alt="Tall Man Run">
                                             </div>
@@ -892,7 +932,7 @@ googletag.cmd.push(function() {
                         </div>
                         <ul class="gamelist">
                                                                                                                                     <li>
-                                        <a href="detail/puzzle/the_room.html">
+                                        <a href="detail/the_room.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/16018c59bb8b679100ce768c21d4086d.jpg" alt="The Room">
                                             </div>
@@ -904,7 +944,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/monument_valley.html">
+                                        <a href="detail/monument_valley.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/0c58e585cb0c526a2e95683edbd822f9.jpg" alt="Monument Valley">
                                             </div>
@@ -916,7 +956,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/monument_valley_2.html">
+                                        <a href="detail/monument_valley_2.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/2c5e6964e87043b8c83245d860a5c002.jpg" alt="Monument Valley 2">
                                             </div>
@@ -928,7 +968,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/the_room_two.html">
+                                        <a href="detail/the_room_two.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/8733bbcfc79351d947eb63ba92043f44.jpg" alt="The Room Two">
                                             </div>
@@ -940,7 +980,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/where%27s_my_water.html">
+                                        <a href="detail/where%27s_my_water.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/fd36c477d5ac0142c3c44ea562cbc153.jpg" alt="Where&#039;s My Water">
                                             </div>
@@ -952,7 +992,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/royal_match.html">
+                                        <a href="detail/royal_match.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/4fdcaafa3745168f85c3f6a17009b5f3.jpg" alt="Royal Match">
                                             </div>
@@ -964,7 +1004,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/fishdom.html">
+                                        <a href="detail/fishdom.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/381e51c6c14ad08585f5df91ef839168.jpg" alt="Fishdom">
                                             </div>
@@ -976,7 +1016,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/toon_blast.html">
+                                        <a href="detail/toon_blast.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/086ca6501dddb79567f52a53b6be8517.jpg" alt="Toon Blast">
                                             </div>
@@ -988,7 +1028,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/merge_dragons%21.html">
+                                        <a href="detail/merge_dragons%21.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/23db152642277f6d57d5b7d6214c1891.jpg" alt="Merge Dragons!">
                                             </div>
@@ -1000,7 +1040,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/angry_birds_dream_blast.html">
+                                        <a href="detail/angry_birds_dream_blast.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/30286ff9cd2e0373ce4127c2bd65cd77.jpg" alt="Angry Birds Dream Blast">
                                             </div>
@@ -1012,7 +1052,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/merge_mansion.html">
+                                        <a href="detail/merge_mansion.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/af30c24e683c5a61de5b1ea2b67f9cd8.jpg" alt="Merge Mansion">
                                             </div>
@@ -1024,7 +1064,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/fishdom_solitaire.html">
+                                        <a href="detail/fishdom_solitaire.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/f69b847843d9bd12ec84440abee6ba69.jpg" alt="Fishdom Solitaire">
                                             </div>
@@ -1036,7 +1076,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/candy_crush_jelly_saga.html">
+                                        <a href="detail/candy_crush_jelly_saga.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/51071b0a8571b47f5cf4159ab659f06d.jpg" alt="Candy Crush Jelly Saga">
                                             </div>
@@ -1048,7 +1088,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/gummy_drop%21_match_3_to_build.html">
+                                        <a href="detail/gummy_drop%21_match_3_to_build.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/6f9b7d7e76f2618339fed2b65829fd17.jpg" alt="Gummy Drop! Match 3 to Build">
                                             </div>
@@ -1060,7 +1100,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/tile_busters.html">
+                                        <a href="detail/tile_busters.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/902f2b1cc91ef6121e2a10526a0d283b.jpg" alt="Tile Busters">
                                             </div>
@@ -1072,7 +1112,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/the_room_three.html">
+                                        <a href="detail/the_room_three.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/a7eefb3daecd5f7960748f98a514eaa7.jpg" alt="The Room Three">
                                             </div>
@@ -1084,7 +1124,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/pull_the_pin.html">
+                                        <a href="detail/pull_the_pin.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/9e55aa5c9bf82032ee37cbfbce65d11a.jpg" alt="Pull the Pin">
                                             </div>
@@ -1096,7 +1136,7 @@ googletag.cmd.push(function() {
                                         </a>
                                     </li>
                                                                                                         <li>
-                                        <a href="detail/puzzle/block_blast_adventure_master.html">
+                                        <a href="detail/block_blast_adventure_master.html">
                                             <div class="thumb">
                                                 <img src="static/img/lazy.png" class="lazy" data-src="https://www.mmimgame.com/uploads/icon/089169810550d56046b6e09aaf2ebb7f.jpg" alt="Block Blast Adventure Master">
                                             </div>
