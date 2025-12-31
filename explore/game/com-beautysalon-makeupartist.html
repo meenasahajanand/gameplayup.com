@@ -1,10 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" v="1.1.3">
 
 
 <head>
     <meta charset="UTF-8" />
-   <link rel="preconnect" href="https://fonts.googleapis.com/">
     <meta name="mobile-web-app-capable" content="yes">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="yes" name="apple-touch-fullscreen" />
@@ -31,24 +30,60 @@
 
 
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830751167"></script>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830626092"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'AW-17830751167');
+        gtag('config', 'AW-17830626092');
     </script>
-      <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-68268SL36Z"></script> 
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9Y9VYEPW4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-68268SL36Z');
-    </script>  
+        gtag('config', 'G-S9Y9VYEPW4');
+    </script>
 
+
+
+     <script type="text/javascript">
+        function reward(event, url, type) {
+            document.querySelector(".body-loading").style.display = "flex";
+            setTimeout(function () {
+                showTip(url, type);
+            }, 5000);
+        }
+        function showTip(url, type) {
+            document.querySelector(".body-loading .loader").style.display = "none";
+            document.querySelector(".tooltip").style.display = "block";
+            let text = type === "apple" ? "App Store" : "Google Play";
+            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+            document.querySelector(".tooltip-button-continue").href = url;
+            document
+                .querySelector(".tooltip-button-cancel")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                    window.location.reload();
+                });
+            document
+                .querySelector(".tooltip-button-continue")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                });
+
+
+            try {
+                gtag('event', 'conversion', { 'send_to': 'AW-17830626092/YrERCOSfjNkbEKyGp7ZC' });
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -704,7 +739,7 @@
 
         #main-screenshots-left {
             left: 10px;
-            background: url("images/games/landing1/right.png");
+            background: url("../images/games/landing1/right.png");
             box-shadow: 0 -4px 4px rgba(0, 0, 0, .25);
             background-size: contain;
             rotate: 180deg
@@ -717,7 +752,7 @@
         #main-screenshots-right {
             right: 10px;
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-            background: url("images/games/landing1/right.png") 0 0/contain
+            background: url("../images/games/landing1/right.png") 0 0/contain
         }
 
         #main-screenshots-content {
@@ -1194,7 +1229,7 @@
                 <div class="info-card">
                     <div class="info-img relative">
                         <img class="lazy-load cover-img"
-                            data-load="images/games/landing1/com-beautysalon-makeupartist.png"
+                            data-load="../images/games/landing1/com-beautysalon-makeupartist.png"
                             alt="Makeup Artist: Makeup Games" />
                         <div class="loader"></div>
                     </div>
@@ -1204,27 +1239,27 @@
                         </div>
                         <div class="info-developer pc">
                             <div class="info-downloads info-developer-item">
-                                <img class="icon" src="images/games/landing1/category.svg"
+                                <img class="icon" src="../images/games/landing1/category.svg"
                                     alt="install" />
                                 <div class="number">Simulation</div>
                             </div>
                             <div class="line"></div>
                             <div class="info-size info-developer-item">
-                                <img class="icon" src="images/games/landing1/age.svg"
+                                <img class="icon" src="../images/games/landing1/age.svg"
                                     alt="size" />
                                 <div class="number">4+</div>
                             </div>
                         </div>
                         <div class="info-rating">
                             <div class="rating-container">
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
 
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
 
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
 
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
 
                                 <span class="rating-score">4.5
                                 </span>
@@ -1310,17 +1345,17 @@
                         <div class="down-link-item t-play"
                             onclick="reward(event,'https://apps.apple.com/us/app/makeup-artist-makeup-games/id1561923965','apple')"
                             target="_blank">
-                            <img alt="apple" data-cfsrc="images/games/landing1/apple-white.png"
+                            <img alt="apple" data-cfsrc="../images/games/landing1/apple-white.png"
                                 style="display: none; visibility: hidden" /><noscript><img
-                                    src="images/games/landing1/apple-white.png" alt="apple" /></noscript><span>App
+                                    src="../images/games/landing1/apple-white.png" alt="apple" /></noscript><span>App
                                 Store</span>
                         </div>
                         <div class="down-link-item t-play"
                             onclick="reward(event,'https://play.google.com/store/apps/details?id=com.beautysalon.makeupartist','google')"
                             target="_blank">
-                            <img alt="google" data-cfsrc="images/games/landing1/google.png"
+                            <img alt="google" data-cfsrc="../images/games/landing1/google.png"
                                 style="display: none; visibility: hidden" /><noscript><img
-                                    src="images/games/landing1/google.png" alt="google" /></noscript><span>Google
+                                    src="../images/games/landing1/google.png" alt="google" /></noscript><span>Google
                                 Play</span>
                         </div>
                     </div>
@@ -1334,31 +1369,31 @@
                             <div class="main-screenshots-sub-container visible-horizontal" id="screenshots_container">
                                 <div class="main-screenshots-item border-radius shadow relative">
                                     <img class="main-screenshots-img lazy-load cs-lazy"
-                                        data-load="images/games/screenshots/com-beautysalon-makeupartist-0.png"
+                                        data-load="../images/games/screenshots/com-beautysalon-makeupartist-0.png"
                                         alt="Makeup Artist: Makeup Games" />
                                     <div class="loader"></div>
                                 </div>
                                 <div class="main-screenshots-item border-radius shadow relative">
                                     <img class="main-screenshots-img lazy-load cs-lazy"
-                                        data-load="images/games/screenshots/com-beautysalon-makeupartist-1.png"
+                                        data-load="../images/games/screenshots/com-beautysalon-makeupartist-1.png"
                                         alt="Makeup Artist: Makeup Games" />
                                     <div class="loader"></div>
                                 </div>
                                 <div class="main-screenshots-item border-radius shadow relative">
                                     <img class="main-screenshots-img lazy-load cs-lazy"
-                                        data-load="images/games/screenshots/com-beautysalon-makeupartist-2.png"
+                                        data-load="../images/games/screenshots/com-beautysalon-makeupartist-2.png"
                                         alt="Makeup Artist: Makeup Games" />
                                     <div class="loader"></div>
                                 </div>
                                 <div class="main-screenshots-item border-radius shadow relative">
                                     <img class="main-screenshots-img lazy-load cs-lazy"
-                                        data-load="images/games/screenshots/com-beautysalon-makeupartist-3.png"
+                                        data-load="../images/games/screenshots/com-beautysalon-makeupartist-3.png"
                                         alt="Makeup Artist: Makeup Games" />
                                     <div class="loader"></div>
                                 </div>
                                 <div class="main-screenshots-item border-radius shadow relative">
                                     <img class="main-screenshots-img lazy-load cs-lazy"
-                                        data-load="images/games/screenshots/com-beautysalon-makeupartist-4.png"
+                                        data-load="../images/games/screenshots/com-beautysalon-makeupartist-4.png"
                                         alt="Makeup Artist: Makeup Games" />
                                     <div class="loader"></div>
                                 </div>
@@ -1374,13 +1409,13 @@
                                 4.5
                             </span>
                             <div class="rating-container">
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
 
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
 
-                                <img class="start" src="images/games/landing1/rate-yes.svg" alt="Rating" />
+                                <img class="start" src="../images/games/landing1/rate-yes.svg" alt="Rating" />
                             </div>
                         </div>
                         <div class="histogram-info">
@@ -1416,7 +1451,7 @@
                             <a class="game-item t-image" href="com-tocaboca-tocakitchen2.html" id="29">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-tocaboca-tocakitchen2.png"
+                                        data-load="../images/games/landing1/com-tocaboca-tocakitchen2.png"
                                         alt="Toca Boca Jr" />
                                     <div class="loader"></div>
                                 </div>
@@ -1427,7 +1462,7 @@
                             <a class="game-item t-image" href="air-com-aceviral-motox3m.html" id="40">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/air-com-aceviral-motox3m.png"
+                                        data-load="../images/games/landing1/air-com-aceviral-motox3m.png"
                                         alt="Moto X3M Bike Race Game" />
                                     <div class="loader"></div>
                                 </div>
@@ -1438,7 +1473,7 @@
                             <a class="game-item t-image" href="com-fingersoft-hcr2.html" id="68">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-fingersoft-hcr2.png"
+                                        data-load="../images/games/landing1/com-fingersoft-hcr2.png"
                                         alt="Hill Climb Racing 2" />
                                     <div class="loader"></div>
                                 </div>
@@ -1449,7 +1484,7 @@
                             <a class="game-item t-image" href="com-bgg-jump.html" id="45">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-bgg-jump.png"
+                                        data-load="../images/games/landing1/com-bgg-jump.png"
                                         alt="Project Makeover" />
                                     <div class="loader"></div>
                                 </div>
@@ -1460,7 +1495,7 @@
                             <a class="game-item t-image" href="com-cdg-tictactoe.html" id="16">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-cdg-tictactoe.png"
+                                        data-load="../images/games/landing1/com-cdg-tictactoe.png"
                                         alt="Tic Tac Toe - 2 Player XO" />
                                     <div class="loader"></div>
                                 </div>
@@ -1471,7 +1506,7 @@
                             <a class="game-item t-image" href="com-outfit7-mytalkingtom2.html" id="41">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-outfit7-mytalkingtom2.png"
+                                        data-load="../images/games/landing1/com-outfit7-mytalkingtom2.png"
                                         alt="My Talking Tom 2" />
                                     <div class="loader"></div>
                                 </div>
@@ -1482,7 +1517,7 @@
                             <a class="game-item t-image" href="com-ea-gp-fifamobile.html" id="10">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-ea-gp-fifamobile.png"
+                                        data-load="../images/games/landing1/com-ea-gp-fifamobile.png"
                                         alt="EA SPORTS FC™ Mobile Soccer" />
                                     <div class="loader"></div>
                                 </div>
@@ -1493,7 +1528,7 @@
                             <a class="game-item t-image" href="com-crazy-block-robo-monster-cliffs-craft.html" id="33">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-crazy-block-robo-monster-cliffs-craft.png"
+                                        data-load="../images/games/landing1/com-crazy-block-robo-monster-cliffs-craft.png"
                                         alt="Block Crazy Robo World" />
                                     <div class="loader"></div>
                                 </div>
@@ -1504,7 +1539,7 @@
                             <a class="game-item t-image" href="com-playgendary-kickthebuddy.html" id="28">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-playgendary-kickthebuddy.png"
+                                        data-load="../images/games/landing1/com-playgendary-kickthebuddy.png"
                                         alt="Kick the Buddy" />
                                     <div class="loader"></div>
                                 </div>
@@ -1515,7 +1550,7 @@
                             <a class="game-item t-image" href="com-supercell-brawlstars.html" id="54">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-supercell-brawlstars.png"
+                                        data-load="../images/games/landing1/com-supercell-brawlstars.png"
                                         alt="Brawl Stars" />
                                     <div class="loader"></div>
                                 </div>
@@ -1526,7 +1561,7 @@
                             <a class="game-item t-image" href="com-water-balls.html" id="249">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-water-balls.png"
+                                        data-load="../images/games/landing1/com-water-balls.png"
                                         alt="Sand Balls - Puzzle Game" />
                                     <div class="loader"></div>
                                 </div>
@@ -1537,7 +1572,7 @@
                             <a class="game-item t-image" href="com-rockstargames-gtasa.html" id="34">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-rockstargames-gtasa.png"
+                                        data-load="../images/games/landing1/com-rockstargames-gtasa.png"
                                         alt="Grand Theft Auto: San Andreas" />
                                     <div class="loader"></div>
                                 </div>                                                                                                                                                     
@@ -1548,7 +1583,7 @@
                             <a class="game-item t-image" href="com-kitkagames-fallbuddies.html" id="53">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-kitkagames-fallbuddies.png"
+                                        data-load="../images/games/landing1/com-kitkagames-fallbuddies.png"
                                         alt="Stumble Guys" />
                                     <div class="loader"></div>
                                 </div>
@@ -1559,7 +1594,7 @@
                             <a class="game-item t-image" href="com-nianticlabs-pokemongo.html" id="59">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-nianticlabs-pokemongo.png"
+                                        data-load="../images/games/landing1/com-nianticlabs-pokemongo.png"
                                         alt="Pokémon GO" />
                                     <div class="loader"></div>
                                 </div>
@@ -1570,7 +1605,7 @@
                             <a class="game-item t-image" href="com-outfit7-mytalkingangela2.html" id="46">
                                 <div class="item-img relative">
                                     <img class="game-item-img lazy-load"
-                                        data-load="images/games/landing1/com-outfit7-mytalkingangela2.png"
+                                        data-load="../images/games/landing1/com-outfit7-mytalkingangela2.png"
                                         alt="My Talking Angela 2" />
                                     <div class="loader"></div>
                                 </div>
@@ -1596,7 +1631,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-dxm-nopuzzle.png" alt="Block Puzzle" />
+                                data-load="../images/games/landing1/com-dxm-nopuzzle.png" alt="Block Puzzle" />
                             <div class="loader"></div>
                         </div>
                         <div class="item-info">
@@ -1604,7 +1639,7 @@
                             <span>Candy Mobile</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.6</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1612,7 +1647,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-scottgames-fnaf3.png"
+                                data-load="../images/games/landing1/com-scottgames-fnaf3.png"
                                 alt="Five Nights at Freddy&#x27;s 3" />
                             <div class="loader"></div>
                         </div>
@@ -1621,7 +1656,7 @@
                             <span>Clickteam USA LLC</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.5</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1629,7 +1664,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-clickteam-ultimatecustomnight.png"
+                                data-load="../images/games/landing1/com-clickteam-ultimatecustomnight.png"
                                 alt="Ultimate Custom Night" />
                             <div class="loader"></div>
                         </div>
@@ -1638,7 +1673,7 @@
                             <span>Clickteam USA LLC</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.6</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1646,7 +1681,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-aim-racing.png"
+                                data-load="../images/games/landing1/com-aim-racing.png"
                                 alt="Extreme Car Driving Simulator" />
                             <div class="loader"></div>
                         </div>
@@ -1655,7 +1690,7 @@
                             <span>AxesInMotion Racing</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.3</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1663,7 +1698,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-motionvolt-flipbounce.png"
+                                data-load="../images/games/landing1/com-motionvolt-flipbounce.png"
                                 alt="Flip Master" />
                             <div class="loader"></div>
                         </div>
@@ -1672,7 +1707,7 @@
                             <span>MotionVolt Games Ltd</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.4</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1680,7 +1715,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-tocaboca-tocalifeworld.png"
+                                data-load="../images/games/landing1/com-tocaboca-tocalifeworld.png"
                                 alt="Toca Life World: Build a Story" />
                             <div class="loader"></div>
                         </div>
@@ -1689,7 +1724,7 @@
                             <span>Toca Boca</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.2</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1697,7 +1732,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-toiletstory-toiletdop-deleteonepart.png"
+                                data-load="../images/games/landing1/com-toiletstory-toiletdop-deleteonepart.png"
                                 alt="Head Monster: DOP Story" />
                             <div class="loader"></div>
                         </div>
@@ -1706,7 +1741,7 @@
                             <span>Debbie Shine</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1714,7 +1749,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-mobgames-poppymobilechap1.png"
+                                data-load="../images/games/landing1/com-mobgames-poppymobilechap1.png"
                                 alt="Poppy Playtime Chapter 1" />
                             <div class="loader"></div>
                         </div>
@@ -1723,7 +1758,7 @@
                             <span>Mob Entertainment</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.1</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1731,7 +1766,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-turner-ttgfigures2.png"
+                                data-load="../images/games/landing1/com-turner-ttgfigures2.png"
                                 alt="Teen Titans GO Figure!" />
                             <div class="loader"></div>
                         </div>
@@ -1740,7 +1775,7 @@
                             <span>Cartoon Network</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.2</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1748,7 +1783,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-kiloo-subwaysurf.png" alt="Subway Surfers" />
+                                data-load="../images/games/landing1/com-kiloo-subwaysurf.png" alt="Subway Surfers" />
                             <div class="loader"></div>
                         </div>
                         <div class="item-info">
@@ -1756,7 +1791,7 @@
                             <span>SYBO Games</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.6</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1764,7 +1799,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-outfit7-talkingtomgoldrun.png"
+                                data-load="../images/games/landing1/com-outfit7-talkingtomgoldrun.png"
                                 alt="Talking Tom Gold Run" />
                             <div class="loader"></div>
                         </div>
@@ -1773,7 +1808,7 @@
                             <span>Outfit7 Limited</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.3</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1781,7 +1816,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-activision-callofduty-shooter.png"
+                                data-load="../images/games/landing1/com-activision-callofduty-shooter.png"
                                 alt="Call of Duty: Mobile Season 11" />
                             <div class="loader"></div>
                         </div>
@@ -1790,7 +1825,7 @@
                             <span>Activision Publishing, Inc.</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.3</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1798,7 +1833,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-peppapig-worldofpeppapig_g.png"
+                                data-load="../images/games/landing1/com-peppapig-worldofpeppapig_g.png"
                                 alt="World of Peppa Pig: Kids Games" />
                             <div class="loader"></div>
                         </div>
@@ -1807,7 +1842,7 @@
                             <span>Entertainment One</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">3.5</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1815,7 +1850,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-playrix-gardenscapes.png"
+                                data-load="../images/games/landing1/com-playrix-gardenscapes.png"
                                 alt="Gardenscapes" />
                             <div class="loader"></div>
                         </div>
@@ -1824,7 +1859,7 @@
                             <span>Playrix</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.7</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1832,7 +1867,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-amanotes-gs-g06.png"
+                                data-load="../images/games/landing1/com-amanotes-gs-g06.png"
                                 alt="Duet Cats: Cute Cat Game" />
                             <div class="loader"></div>
                         </div>
@@ -1841,7 +1876,7 @@
                             <span>AMANOTES PTE LTD</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.5</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1849,7 +1884,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-neighbors-darkriddle.png"
+                                data-load="../images/games/landing1/com-neighbors-darkriddle.png"
                                 alt="Dark Riddle" />
                             <div class="loader"></div>
                         </div>
@@ -1858,7 +1893,7 @@
                             <span>PAGA GAMES</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.1</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1866,7 +1901,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-imangi-templerun2.png" alt="Temple Run 2" />
+                                data-load="../images/games/landing1/com-imangi-templerun2.png" alt="Temple Run 2" />
                             <div class="loader"></div>
                         </div>
                         <div class="item-info">
@@ -1874,7 +1909,7 @@
                             <span>Imangi Studios</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.4</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1882,7 +1917,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-scottgames-fivenightsatfreddys.png"
+                                data-load="../images/games/landing1/com-scottgames-fivenightsatfreddys.png"
                                 alt="Five Nights at Freddy&#x27;s" />
                             <div class="loader"></div>
                         </div>
@@ -1891,7 +1926,7 @@
                             <span>Clickteam USA LLC</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.8</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1899,7 +1934,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-scottgames-fnaf2.png"
+                                data-load="../images/games/landing1/com-scottgames-fnaf2.png"
                                 alt="Five Nights at Freddy&#x27;s 2" />
                             <div class="loader"></div>
                         </div>
@@ -1908,7 +1943,7 @@
                             <span>Clickteam USA LLC</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.7</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1916,7 +1951,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-dynlwpp-atur129.png"
+                                data-load="../images/games/landing1/com-dynlwpp-atur129.png"
                                 alt="Drawing Carnival" />
                             <div class="loader"></div>
                         </div>
@@ -1925,7 +1960,7 @@
                             <span>CrazyLabs LTD</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.5</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1933,7 +1968,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-gameloft-android-anmp-gloftdmhm.png"
+                                data-load="../images/games/landing1/com-gameloft-android-anmp-gloftdmhm.png"
                                 alt="Minion Rush: Running Game" />
                             <div class="loader"></div>
                         </div>
@@ -1942,7 +1977,7 @@
                             <span>Gameloft SE</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.6</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1950,7 +1985,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-rovio-abcasual.png"
+                                data-load="../images/games/landing1/com-rovio-abcasual.png"
                                 alt="Angry Birds Journey" />
                             <div class="loader"></div>
                         </div>
@@ -1959,7 +1994,7 @@
                             <span>Rovio Entertainment Corporation</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.5</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -1967,7 +2002,7 @@
 
                         <div class="item-img relative">
                             <img class="game-item-img lazy-load"
-                                data-load="images/games/landing1/com-roblox-client.png" alt="Roblox" />
+                                data-load="../images/games/landing1/com-roblox-client.png" alt="Roblox" />
                             <div class="loader"></div>
                         </div>
                         <div class="item-info">
@@ -1975,7 +2010,7 @@
                             <span>Roblox Corporation</span>
                             <div class="rating-container" style="border: none">
                                 <span class="rating-score" style="font-size: 12px">4.4</span><img class="start"
-                                    src="images/games/landing1/rate-no.svg" alt="Rating" />
+                                    src="../images/games/landing1/rate-no.svg" alt="Rating" />
                             </div>
                         </div>
                     </a>
@@ -2007,16 +2042,16 @@
             </div>
         </div>
     </div>
-    <!-- Universal Image Loader - Loads all images immediately -->
-    <script src="load-images.js"></script>
     <script>
-        let content = document.getElementById("main-screenshots-content"), left = document.getElementById("main-screenshots-left"), right = document.getElementById("main-screenshots-right"); window.addEventListener("resize", function () { document.body.clientWidth > 1200 && (content.scrollWidth - content.scrollLeft - content.clientWidth < 10 ? right.classList.add("disabled") : right.classList.remove("disabled"), content.scrollLeft > 10 ? left.classList.remove("disabled") : left.classList.add("disabled")) }), right.addEventListener("click", function () { right.classList.contains("disabled") || content.scrollTo({ left: content.scrollLeft + 555, behavior: "smooth" }), setTimeout(function () { content.scrollLeft > 10 && left.classList.remove("disabled"), content.scrollWidth - content.scrollLeft - content.clientWidth < 10 && right.classList.add("disabled") }, 500) }), left.addEventListener("click", function () { left.classList.contains("disabled") || content.scrollTo({ left: content.scrollLeft - 555, behavior: "smooth" }), setTimeout(function () { content.scrollLeft < 10 && left.classList.add("disabled"), content.scrollWidth - content.scrollLeft - content.clientWidth > 10 && right.classList.remove("disabled") }, 500) }); document.addEventListener("DOMContentLoaded", () => { let t = document.querySelectorAll(".get-the-game-down a"); if (t.length && t[1].classList.contains("button-disabled")) { let e = t[1].querySelector("img"); e.src = "/explore/images/games/landing1/google-disabled.png" } }), document.addEventListener("DOMContentLoaded", () => { let t = document.querySelectorAll(".get-the-game-down a"); if (t.length && t[1].classList.contains("button-disabled")) { let e = t[1].querySelector("img"); e.src = "/explore/images/games/landing1/google-disabled.png" } document.querySelectorAll(".down-link-item").forEach(t => { "null" === t.getAttribute("href") && t.classList.add("down-link-item-ban") }) });
+        let content = document.getElementById("main-screenshots-content"), left = document.getElementById("main-screenshots-left"), right = document.getElementById("main-screenshots-right"); window.addEventListener("resize", function () { document.body.clientWidth > 1200 && (content.scrollWidth - content.scrollLeft - content.clientWidth < 10 ? right.classList.add("disabled") : right.classList.remove("disabled"), content.scrollLeft > 10 ? left.classList.remove("disabled") : left.classList.add("disabled")) }), right.addEventListener("click", function () { right.classList.contains("disabled") || content.scrollTo({ left: content.scrollLeft + 555, behavior: "smooth" }), setTimeout(function () { content.scrollLeft > 10 && left.classList.remove("disabled"), content.scrollWidth - content.scrollLeft - content.clientWidth < 10 && right.classList.add("disabled") }, 500) }), left.addEventListener("click", function () { left.classList.contains("disabled") || content.scrollTo({ left: content.scrollLeft - 555, behavior: "smooth" }), setTimeout(function () { content.scrollLeft < 10 && left.classList.add("disabled"), content.scrollWidth - content.scrollLeft - content.clientWidth > 10 && right.classList.remove("disabled") }, 500) }); var viewHeight = document.documentElement.clientHeight; function debounce(t, e) { var n = null; return function () { n && clearTimeout(n), n = setTimeout(t, e) } } function loadAllImagesNow(){document.querySelectorAll("img[data-load]").forEach(function(img){if(!img.dataset.loaded){img.onload=function(){this.style.display="block";this.style.opacity="1";let loader=this.parentElement.querySelector(".loader");if(loader)loader.style.display="none"};img.onerror=function(){this.style.display="block";this.style.opacity="1";let loader=this.parentElement.querySelector(".loader");if(loader)loader.style.display="none"};img.setAttribute("src",img.dataset.load);img.setAttribute("data-loaded","true");img.style.display="block";img.style.opacity="1"}})}
+            function lazyLoadImgs(){ { document.querySelectorAll("img[data-load]").forEach(function (t) { let e = t.parentElement.getBoundingClientRect(); (0 != e.top || 0 != e.bottom || 0 != e.left || 0 != e.right || 0 != e.width || 0 != e.height || 0 != e.x || 0 != e.y) && !t.dataset.loaded && (t.onload = function () { this.style.display = "block"; let t = this.parentElement.getElementsByClassName("loader"); t[0] && (t[0].style.display = "none") }, e.bottom >= 0 && e.top < viewHeight && (t.setAttribute("src", t.dataset.load), t.setAttribute("data-loaded", !0))) }) } lazyLoadImgs();, window.addEventListener("scroll", debounce(lazyLoadImgs, 100)), window.addEventListener("resize", debounce(() => { viewHeight = document.documentElement.clientHeight, lazyLoadImgs(); }, 200)), document.addEventListener("DOMContentLoaded", () => { let t = document.querySelectorAll(".get-the-game-down a"); if (t.length && t[1].classList.contains("button-disabled")) { let e = t[1].querySelector("img"); e.src = "../images/games/landing1/google-disabled.png" } }), document.addEventListener("DOMContentLoaded", () => { let t = document.querySelectorAll(".get-the-game-down a"); if (t.length && t[1].classList.contains("button-disabled")) { let e = t[1].querySelector("img"); e.src = "../images/games/landing1/google-disabled.png" } document.querySelectorAll(".down-link-item").forEach(t => { "null" === t.getAttribute("href") && t.classList.add("down-link-item-ban") }) });
     </script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
         integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
         data-cf-beacon='{"version":"2024.11.0","token":"fff152d20a4c41109555c9c97abe9a90","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous"></script>
+    <script src="../../static/js/image-loader.js"></script>
 </body>
 
 

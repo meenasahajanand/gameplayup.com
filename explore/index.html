@@ -4,8 +4,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <base href="/explore/" />
-   <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <base href="/explore/">
     <meta name="mobile-web-app-capable" content="yes">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="yes" name="apple-touch-fullscreen" />
@@ -504,24 +503,60 @@
     </style>
 
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830751167"></script>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830626092"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'AW-17830751167');
+        gtag('config', 'AW-17830626092');
     </script>
-      <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-68268SL36Z"></script> 
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9Y9VYEPW4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-68268SL36Z');
-    </script>  
+        gtag('config', 'G-S9Y9VYEPW4');
+    </script>
 
+
+
+     <script type="text/javascript">
+        function reward(event, url, type) {
+            document.querySelector(".body-loading").style.display = "flex";
+            setTimeout(function () {
+                showTip(url, type);
+            }, 5000);
+        }
+        function showTip(url, type) {
+            document.querySelector(".body-loading .loader").style.display = "none";
+            document.querySelector(".tooltip").style.display = "block";
+            let text = type === "apple" ? "App Store" : "Google Play";
+            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+            document.querySelector(".tooltip-button-continue").href = url;
+            document
+                .querySelector(".tooltip-button-cancel")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                    window.location.reload();
+                });
+            document
+                .querySelector(".tooltip-button-continue")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                });
+
+
+            try {
+                gtag('event', 'conversion', { 'send_to': 'AW-17830626092/YrERCOSfjNkbEKyGp7ZC' });
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+    </script>
 <!-- Meta Pixel Code -->
 
 <!-- End Meta Pixel Code -->
@@ -6505,6 +6540,7 @@
         integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
         data-cf-beacon='{"version":"2024.11.0","token":"fff152d20a4c41109555c9c97abe9a90","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous"></script>
+    <script src="static/js/image-loader.js"></script>
 </body>
 
 </html>
